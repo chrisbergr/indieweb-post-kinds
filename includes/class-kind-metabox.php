@@ -45,8 +45,6 @@ class Kind_Metabox {
 	}
 
 	public static function after_title_metabox( $post ) {
-
-			//do_meta_boxes( get_current_screen(), 'kind_after_title', $post );
 			do_meta_boxes( get_current_screen(), 'side', $post );
 	}
 
@@ -192,7 +190,6 @@ class Kind_Metabox {
 			esc_html__( 'Response Properties', 'indieweb-post-kinds' ), // Title
 			array( 'Kind_Metabox', 'reply_metabox' ), // Callback function
 			'post',
-			//'kind_after_title', // Context
 			'side', // Context
 			'default' // Priority
 		);
